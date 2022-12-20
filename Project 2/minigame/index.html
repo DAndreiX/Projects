@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+    <title>Minigame</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <section class="main-header__section">
+        <div class="main-header__section--elements">
+          <div id="player1avatar" class="avatar-container">
+            <img src="" alt="" />
+          </div>
+          <progress
+            id="player1-healthbar"
+            class="main-header__section--health"
+            value="100"
+            max="100"
+          ></progress>
+          <p class="main-header__section--cash">
+            $ <span id="player1-cash">0</span>
+          </p>
+        </div>
+        <span id="player1_score" class="player1-score">0</span>
+        <h1>VERSUS</h1>
+        <span id="player2_score" class="player2-score">0</span>
+        <div class="main-header__section--elements">
+          <div id="player2avatar" class="avatar-container">
+            <img src="" alt="" />
+          </div>
+          <progress
+            id="player2-healthbar"
+            class="main-header__section--health changecolor"
+            value="100"
+            max="100"
+          ></progress>
+          <p class="main-header__section--cash">
+            $ <span id="player2-cash">0</span>
+          </p>
+        </div>
+      </section>
+    </header>
+    <main class="main-section">
+      <div class="main-section__buttons">
+        <button id="atkbtn" type="button">Light Attack</button>
+        <button id="stratkbtn" type="button">Strong Attack</button>
+        <button id="healbtn" type="button">Heal</button>
+        <button id="logbtn" type="button">Show Log</button>
+      </div>
+    </main>
+  </body>
+</html>

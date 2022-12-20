@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family: sans-serif;
+}
+
+.main-header{
+    background:rgba(0,0,0,1);
+    margin:1rem 1rem 0 1rem;
+    min-width: 800px;
+}
+
+.main-header__section{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header__section h1{
+    position:relative;
+    bottom: 1.5rem;
+    color:white;
+    transform: rotateZ(360deg);
+    transition: transform 700ms 500ms ease-in;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-header__section--elements{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:1rem 1rem;
+}
+
+.avatar-container{
+    height:10rem;
+    width:10rem;
+    border:2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.main-header__section--health{
+    width:13rem;
+    height:1.5rem;
+}
+
+.main-header__section--health[value],
+.main-header__section--health::-webkit-progress-bar{
+    background-color: white;
+}
+
+.main-header__section--health::-webkit-progress-value{
+    background-color: blue;
+}
+
+.changecolor::-webkit-progress-value{
+    background:red;
+}
+
+.main-header__section--cash{
+    color:white;
+    font-weight: bold;
+}
+
+.main-section{
+    background-color: firebrick;
+    margin:0 1rem 1rem 1rem;
+    height:20rem;
+    min-width: 800px;
+}
+
+.main-section__buttons{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+
+.main-section__buttons button{
+    width:20rem;
+    height:2rem;
+    margin:0.5rem;
+    background:white;
+    color:black;
+    border:2px solid black;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.main-section__buttons button:hover{
+    background:black;
+    color:white;
+}
+
+.player1-score{
+    position: relative;
+    color:white;
+    align-self: flex-start;
+    top:2rem;
+    right:5rem;
+    font-size: 1.5rem;
+}
+
+.player2-score{
+    position: relative;
+    color:white;
+    align-self: start;
+    top:2rem;
+    left:5rem;
+    font-size: 1.5rem;
+}
