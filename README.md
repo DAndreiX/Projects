@@ -1,5 +1,5 @@
 # Project 1
-##Contains a HTMl website 
+Contains a HTMl/CSS/JavaScript website 
 
-#Project 2
-##Contains a HTML/Javascript minigame
+# Project 2
+Contains a HTML/CSS/JavaScript minigame
