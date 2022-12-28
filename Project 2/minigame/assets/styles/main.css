@@ -44,6 +44,10 @@ body{
     margin-bottom: 0.5rem;
 }
 
+.avatar-container img{
+    width:100%;
+}
+
 .main-header__section--health{
     width:13rem;
     height:1.5rem;
@@ -65,6 +69,7 @@ body{
 .main-header__section--cash{
     color:white;
     font-weight: bold;
+    margin:0;
 }
 
 .main-section{
@@ -85,7 +90,7 @@ body{
 .main-section__buttons button{
     width:20rem;
     height:2rem;
-    margin:0.5rem;
+    margin:1rem 0.1rem;
     background:white;
     color:black;
     border:2px solid black;
@@ -114,4 +119,53 @@ body{
     top:2rem;
     left:5rem;
     font-size: 1.5rem;
+}
+
+.sort-words{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background:black;
+}
+
+.sort-words div{
+    display:flex;
+    align-items: center;
+}
+
+.sort{
+    width:35rem;
+    height:5rem;
+    border:3px solid black;
+    margin:1rem 0;
+    font-size: 1.5rem;
+    overflow: auto;
+    background: white;
+    font-weight: bold;
+    color:black;
+}
+
+.sort-button{
+    width:13rem;
+    height:3rem;
+    margin:0 4rem;
+    background: lightskyblue;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor:pointer;
+}
+
+.sort-button:hover{
+    color:white;
+    background:red;
+}
+
+.display-health{
+    color:black;
+    position:relative;
+    top: -1.3rem;
+    display:inline-block;
+    margin:0;
+    font-weight: bold;
+    font-size: 1.1rem;
 }

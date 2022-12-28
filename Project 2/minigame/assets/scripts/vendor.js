@@ -1,6 +1,9 @@
 const player1Health = document.getElementById("player1-healthbar");
 const player2Health = document.getElementById("player2-healthbar");
 
+const player1HealthIndicator = document.getElementById("player1-health--indicator");
+const player2HealthIndicator = document.getElementById("player2-health--indicator");
+
 const player1Cash = document.getElementById("player1-cash");
 const player2Cash = document.getElementById("player2-cash");
 
@@ -15,21 +18,7 @@ const stratkBtn = document.getElementById("stratkbtn");
 const healBtn = document.getElementById("healbtn");
 const logBtn = document.getElementById("logbtn");
 
-let TURN;
-
-function randomizeTurn(){
-    const randomNr = Math.random(5) * 50;
-    if(randomNr >= 0 && randomNr < 25) {
-        TURN = 'PLAYER1';
-        player1Avatar.style.outline = '5px solid red'
-    } else if(randomNr >= 25 && randomNr <= 50) {
-        TURN = 'PLAYER2';
-        player2Avatar.style.outline = '5px solid red'
-    }
-}
-randomizeTurn();
-
-function resetGame(){
+const resetGame = () => {
    player1Health.value = 100;
    player1Health.max = 100;
    player2Health.value = 100;
@@ -42,45 +31,12 @@ function resetGame(){
    player2Score.textContent = 0;
 }
 
-function dealDamage(damage){
+const dealDamage = damage => {
     const dealtDamage = Math.random() * damage;
     return dealtDamage;
 }
 
-function randomHeal(value){
+const randomHeal = value => {
     const healValue = Math.random() * value;
     return healValue;
-}
-
-function setCash(player, value){
-    switch(player){
-        case 'PLAYER1':
-            player1Cash.textContent = value;
-            break;
-        case 'PLAYER2':
-            player2Cash.textContent = value;
-            break; 
-    }
-}
-
-function giveCash(player, value){
-    switch(player){
-        case 'PLAYER1':
-            player1Cash.textContent = value;
-            break;
-        case 'PLAYER2':
-            player2Cash.textContent = value;
-            break; 
-    }
-}
-
-function takeCash(player, value){
-    switch(player){
-        case 'PLAYER1':
-            player1Cash.textContent -= value;
-            break;
-        case 'PLAYER2':
-            player2Cash.textContent -= value;
-            break; 
-    }
 }
